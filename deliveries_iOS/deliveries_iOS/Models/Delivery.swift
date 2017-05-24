@@ -52,6 +52,14 @@ class Delivery: Mappable {
     }
     var location:Location?
     
+    var coordinate:CLLocationCoordinate2D? {
+        get {
+            guard let latitude = location?.latitude, let longitude = location?.longitude else {
+                return nil
+            }
+            return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        }
+    }
     required init?(map: Map) {
         
     }

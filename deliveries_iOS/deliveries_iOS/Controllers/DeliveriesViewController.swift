@@ -16,6 +16,7 @@ class DeliveriesViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Things to Deliver"
         tableView.register(DeliveryTableViewCell.self, forCellReuseIdentifier: "DeliveryTableViewCell")
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44
@@ -99,6 +100,11 @@ class DeliveriesViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        navigationController?.pushViewController(DeliveryDetailsViewController(delivery:deliveries[indexPath.row]), animated: true)
+    }
 
     func fetchDeliveries() {
         ApiManager.shared.getDeliveries(atOffset: _offset) { (deliveries, nextOffset, error) in

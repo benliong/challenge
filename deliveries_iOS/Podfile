@@ -11,6 +11,7 @@ target 'deliveries_iOS' do
     pod 'SwiftyJSON', '~> 3.1'
     pod 'SnapKit', '~> 3.2'
     pod 'ESPullToRefresh', '~> 2.6'
+    pod 'GoogleMaps', '~> 2.2'
     
   target 'deliveries_iOSTests' do
     inherit! :search_paths

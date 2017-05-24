@@ -17,6 +17,7 @@
 		C92001271ED4391400F65924 /* deliveries_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92001261ED4391400F65924 /* deliveries_iOSUITests.swift */; };
 		C921E7771ED4AC0400E434CC /* DeliveryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C921E7761ED4AC0400E434CC /* DeliveryTableViewCell.swift */; };
 		C940AFE81ED530F400B43E20 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940AFE71ED530F400B43E20 /* UIImageViewExtensions.swift */; };
+		C940AFEC1ED53FBD00B43E20 /* DeliveryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940AFEB1ED53FBD00B43E20 /* DeliveryDetailsViewController.swift */; };
 		C946894B1ED4936600701F63 /* DeliveriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C946894A1ED4936600701F63 /* DeliveriesViewController.swift */; };
 		C94689501ED493A300701F63 /* Delivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = C946894F1ED493A300701F63 /* Delivery.swift */; };
 		C9AEB97F1ED43BA5008FA2DB /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AEB97E1ED43BA5008FA2DB /* ApiManager.swift */; };
@@ -65,6 +66,7 @@
 		C92001281ED4391400F65924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C921E7761ED4AC0400E434CC /* DeliveryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryTableViewCell.swift; sourceTree = "<group>"; };
 		C940AFE71ED530F400B43E20 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
+		C940AFEB1ED53FBD00B43E20 /* DeliveryDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryDetailsViewController.swift; sourceTree = "<group>"; };
 		C946894A1ED4936600701F63 /* DeliveriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveriesViewController.swift; sourceTree = "<group>"; };
 		C946894F1ED493A300701F63 /* Delivery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delivery.swift; sourceTree = "<group>"; };
 		C9AEB97E1ED43BA5008FA2DB /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			children = (
 				C946894A1ED4936600701F63 /* DeliveriesViewController.swift */,
 				C921E7761ED4AC0400E434CC /* DeliveryTableViewCell.swift */,
+				C940AFEB1ED53FBD00B43E20 /* DeliveryDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				C9AEB97F1ED43BA5008FA2DB /* ApiManager.swift in Sources */,
 				C92001071ED4391400F65924 /* AppDelegate.swift in Sources */,
 				C921E7771ED4AC0400E434CC /* DeliveryTableViewCell.swift in Sources */,
+				C940AFEC1ED53FBD00B43E20 /* DeliveryDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

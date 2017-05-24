@@ -4,6 +4,11 @@ PODS:
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 2.0)
   - ESPullToRefresh (2.6)
+  - GoogleMaps (2.2.0):
+    - GoogleMaps/Maps (= 2.2.0)
+  - GoogleMaps/Base (2.2.0)
+  - GoogleMaps/Maps (2.2.0):
+    - GoogleMaps/Base
   - ObjectMapper (2.2.6)
   - SnapKit (3.2.0)
   - SwiftyJSON (3.1.4)
@@ -12,6 +17,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.4)
   - AlamofireObjectMapper (~> 4.1)
   - ESPullToRefresh (~> 2.6)
+  - GoogleMaps (~> 2.2)
   - SnapKit (~> 3.2)
   - SwiftyJSON (~> 3.1)
 
@@ -19,10 +25,11 @@ SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
   ESPullToRefresh: 85f4990acf87f78c6a1466bbbee7a75d7de24db9
+  GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
   ObjectMapper: 042708195cc46c20871cbcbec0453826398273fd
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 15cc894cd4c6dd5ed231cb43391f5d5cd3618d49
+PODFILE CHECKSUM: 01b01e8502d3bcc8f7e89b54166b2c28f33d9eeb
 
 COCOAPODS: 1.2.1

@@ -31,6 +31,7 @@ typealias PaginatedArrayCompletionClosure = (_ objects:[Any]?, _ next:Int?, _ er
 
 
 class ApiManager: NSObject {
+    static let googleMapsAPIKey = "AIzaSyB40OFEYp8XCstAsg9U6R6uKRgaYnDG9co"
     static let shared = ApiManager()
     var baseURLString = "http://192.168.1.100:8080/"
     func getDeliveries(atOffset offset:Int = 0, completionHandler:@escaping PaginatedArrayCompletionClosure) {
