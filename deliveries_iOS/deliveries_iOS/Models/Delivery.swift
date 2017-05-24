@@ -32,7 +32,7 @@ class Location:Mappable {
     func mapping(map: Map) {
         latitude    <- map["lat"]
         longitude   <- map["lng"]
-        address     <- map["address"]
+        address    <- map["address"]
     }
 }
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ESPullToRefresh
 
 class DeliveriesViewController: UITableViewController {
 
@@ -15,6 +16,14 @@ class DeliveriesViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(DeliveryTableViewCell.self, forCellReuseIdentifier: "DeliveryTableViewCell")
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 44
+        tableView.es_addPullToRefresh {
+            self.deliveries.removeAll()
+            self._offset = 0
+            self.fetchDeliveries()
+        }
         fetchDeliveries()
     }
 
@@ -27,23 +36,24 @@ class DeliveriesViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return deliveries.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DeliveryTableViewCell", for: indexPath) as? DeliveryTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        cell.delivery = deliveries[indexPath.row]
+        cell.reloadData()
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -93,6 +103,8 @@ class DeliveriesViewController: UITableViewController {
     func fetchDeliveries() {
         ApiManager.shared.getDeliveries(atOffset: _offset) { (deliveries, nextOffset, error) in
             guard let deliveries = deliveries as? [Delivery], error == nil else {
+                self.tableView.reloadData()
+                self.tableView.es_stopPullToRefresh()
                 return
             }
             if let nextOffset = nextOffset {
@@ -100,6 +112,7 @@ class DeliveriesViewController: UITableViewController {
             }
             self.deliveries.append(contentsOf: deliveries)
             self.tableView.reloadData()
+            self.tableView.es_stopPullToRefresh()
         }
     }
 }
